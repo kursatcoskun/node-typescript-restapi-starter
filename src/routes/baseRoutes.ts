@@ -8,4 +8,11 @@ BaseRoutes.get('/', (req, res) =>
   })
 );
 
+// Mismatch URL
+BaseRoutes.get('*', (req, res) =>
+res.status(404).json({
+    status: "Requested url could not found"
+  })
+);
+
 export default BaseRoutes;
